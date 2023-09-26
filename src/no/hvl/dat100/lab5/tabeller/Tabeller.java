@@ -16,9 +16,8 @@ public class Tabeller {
 
 		for (int i = 0; i < tabell.length; i++) {
 			tekst += tabell[i];
-			if (i == tabell.length - 1) {
+			if (i == tabell.length - 1)
 				break;
-			}
 			tekst += ",";
 		}
 		return tekst + "]";
@@ -27,9 +26,8 @@ public class Tabeller {
 	// c)
 	public static int summer(int[] tabell) {
 		int sum = 0;
-		for (int i = 0; i < tabell.length; i++) {
+		for (int i = 0; i < tabell.length; i++)
 			sum += tabell[i];
-		}
 
 		sum = 0;
 		int i = 0;
@@ -41,9 +39,8 @@ public class Tabeller {
 
 		sum = 0;
 
-		for (int tall : tabell) {
+		for (int tall : tabell)
 			sum += tall;
-		}
 
 		return sum;
 	}
@@ -77,33 +74,34 @@ public class Tabeller {
 	// f)
 	public static int[] reverser(int[] tabell) {
 		int[] revTab = new int[tabell.length];
-		for (int i = 0; i < tabell.length; i++) {
+
+		for (int i = 0; i < tabell.length; i++)
 			revTab[tabell.length - 1 - i] = tabell[i];
-		}
+
 		return revTab;
 	}
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
 		boolean res = true;
+
 		for (int i = 0; i < tabell.length - 1; i++) {
-			if (tabell [i+1] < tabell [i]) {
+			if (tabell[i + 1] < tabell[i])
 				res = false;
-			}
 		}
+
 		return res;
 	}
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
-		int [] nytabell = new int[tabell1.length + tabell2.length];
-		for (int i = 0; i < tabell1.length; i++) {
+		int[] nytabell = new int[tabell1.length + tabell2.length];
+		for (int i = 0; i < tabell1.length; i++)
 			nytabell[i] = tabell1[i];
-		}
-		
-		for (int i = 0; i < tabell2.length; i++) {
+
+		for (int i = 0; i < tabell2.length; i++)
 			nytabell[i + tabell1.length] = tabell2[i];
-		}
+
 		return nytabell;
 	}
 }
